@@ -1,0 +1,231 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$zen-auto-include-item-base: true;
+
+
+// layouts
+
+#wrap {
+  @include zen-grid-container();
+  $zen-column-count: 12;
+  max-width: 960px;
+  margin: auto;
+  height: auto;
+    // border: 1px solid #ddd;
+  @include box-shadow(#ccc 0px 0px 10px);
+}
+
+#head, 
+#main,
+#sidebar,
+#right-bottom,
+#foot {
+  min-height: 100px;
+}
+
+
+
+// skin, sort of
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#wrap > div {
+  padding: .5em;
+}
+
+
+#sidebar {
+
+  .upper {
+    border: 1px solid #aaa;
+    background: #ddd;
+    padding: 0 .5em;
+  }
+  h3 { // for the mockup
+    margin-bottom: 4em;
+  }
+}
+
+#head {
+  min-height: 150px;
+}
+
+.hero-image {
+  img {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    opacity: 0.25;
+  }
+}
+
+
+.product-image {
+  height: 120px;
+  width: 80px;
+  background: #eee;
+  border: 5px solid #fff;
+  box-shadow: #ccc 5px 5px 5px;
+  margin-right: 1em;
+  float: left;
+}
+
+
+.faux-content {
+}
+
+.box {
+  width: 100%;
+  margin: 1em 0;
+  height: 350px;
+  border: 1px solid #bbb;
+}
+
+.section {
+  padding-bottom: 1em;
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 1em;
+}
+
+
+#foot {
+  background: #eee;
+  padding: .5em;
+  min-height: 250px;
+}
+
+// responsive stuff default, mobile-first viewport 
+
+@media all and (max-width: 500px) {
+  #main {
+    .inside div {
+      display: none;
+    }
+    
+    .inside div.lede {
+      display: block;
+    }
+    
+    .second, 
+    .third {
+      display: none;
+    }
+  }
+  
+  .hero-image {
+    display: none;
+  }
+  
+  .lower {
+    display: none;
+  }
+}
+
+// bigger viewports
+
+@media all and (min-width: 500px) {
+
+  #wrap {
+    $zen-gutter-width: 10px;
+  }
+
+  #main {
+    display: static;
+  }
+  
+  .product-image {
+    margin: -33px 15px 0 15px;
+    margin-right: 15px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .collapsible {
+    height: 3.4em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    padding: 1em;
+    
+    &.open {
+      height: auto;
+    }
+  }  
+  
+  .section.collapsible {
+    height: 3em;
+  }  
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .upper {
+    @include zen-grid-container();    
+
+    .details {
+      @include zen-grid-item(12, 1);
+    }
+    
+    .parents-say,
+    .need-to-know {
+      @include zen-clear();
+      @include zen-grid-item(6, 1);
+      // border-right: 1px solid #aaa;
+    }
+    
+    .kids-say,
+    .can-learn {
+      @include zen-grid-item(6, 7);     
+    }
+  } 
+  
+  .lower {
+    display: none;
+  } 
+}
+
+
+// biggest viewport
+
+@media all and (min-width: 750px) {
+
+  $zen-auto-include-item-base: true;
+  
+  #head {
+    @include zen-grid-container;
+    @include zen-grid-item(12,1);
+  }
+  
+  #main {
+    @include zen-grid-item(8,1);
+  }
+  
+  #sidebar {
+    @include zen-clear();
+    @include zen-grid-item(4,9);
+  }
+  
+  #sidebar-lower {
+    @include zen-clear();
+    @include zen-grid-item(4,9);
+  }
+  
+  #right-bottom {
+    @include zen-grid-item(4,9);
+  }
+  
+  #foot {
+    @include zen-grid-container;
+    @include zen-clear();
+    @include zen-grid-item(12,1);
+  }
+}
+

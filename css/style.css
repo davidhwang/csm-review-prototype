@@ -1,0 +1,333 @@
+/* line 1, ../sass/_review.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 16, ../sass/_review.scss */
+#wrap {
+  max-width: 960px;
+  margin: auto;
+  height: auto;
+  -webkit-box-shadow: #cccccc 0px 0px 10px;
+  -moz-box-shadow: #cccccc 0px 0px 10px;
+  box-shadow: #cccccc 0px 0px 10px;
+}
+/* line 46, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+#wrap:before, #wrap:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+#wrap:after {
+  clear: both;
+}
+
+/* line 30, ../sass/_review.scss */
+#head,
+#main,
+#sidebar,
+#right-bottom,
+#foot {
+  min-height: 100px;
+}
+
+/* line 37, ../sass/_review.scss */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 41, ../sass/_review.scss */
+#wrap > div {
+  padding: .5em;
+}
+
+/* line 48, ../sass/_review.scss */
+#sidebar .upper {
+  border: 1px solid #aaa;
+  background: #ddd;
+  padding: 0 .5em;
+}
+/* line 53, ../sass/_review.scss */
+#sidebar h3 {
+  margin-bottom: 4em;
+}
+
+/* line 58, ../sass/_review.scss */
+#head {
+  min-height: 150px;
+}
+
+/* line 63, ../sass/_review.scss */
+.hero-image img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  opacity: 0.25;
+}
+
+/* line 72, ../sass/_review.scss */
+.product-image {
+  height: 120px;
+  width: 80px;
+  background: #eee;
+  border: 5px solid #fff;
+  box-shadow: #ccc 5px 5px 5px;
+  margin-right: 1em;
+  float: left;
+}
+
+/* line 86, ../sass/_review.scss */
+.box {
+  width: 100%;
+  margin: 1em 0;
+  height: 350px;
+  border: 1px solid #bbb;
+}
+
+/* line 93, ../sass/_review.scss */
+.section {
+  padding-bottom: 1em;
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 1em;
+}
+
+/* line 100, ../sass/_review.scss */
+#foot {
+  background: #eee;
+  padding: .5em;
+  min-height: 250px;
+}
+
+@media all and (max-width: 500px) {
+  /* line 110, ../sass/_review.scss */
+  #main .inside div {
+    display: none;
+  }
+  /* line 114, ../sass/_review.scss */
+  #main .inside div.lede {
+    display: block;
+  }
+  /* line 119, ../sass/_review.scss */
+  #main .second,
+  #main .third {
+    display: none;
+  }
+
+  /* line 124, ../sass/_review.scss */
+  .hero-image {
+    display: none;
+  }
+
+  /* line 128, ../sass/_review.scss */
+  .lower {
+    display: none;
+  }
+}
+@media all and (min-width: 500px) {
+  /* line 141, ../sass/_review.scss */
+  #main {
+    display: static;
+  }
+
+  /* line 145, ../sass/_review.scss */
+  .product-image {
+    margin: -33px 15px 0 15px;
+    margin-right: 15px;
+    position: relative;
+    z-index: 5;
+  }
+
+  /* line 152, ../sass/_review.scss */
+  .collapsible {
+    height: 3.4em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    padding: 1em;
+  }
+  /* line 159, ../sass/_review.scss */
+  .collapsible.open {
+    height: auto;
+  }
+
+  /* line 164, ../sass/_review.scss */
+  .section.collapsible {
+    height: 3em;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  /* line 46, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+  .upper:before, .upper:after {
+    content: "";
+    display: table;
+  }
+  /* line 50, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+  .upper:after {
+    clear: both;
+  }
+  /* line 173, ../sass/_review.scss */
+  .upper .details {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 178, ../sass/_review.scss */
+  .upper .parents-say,
+  .upper .need-to-know {
+    clear: left;
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 185, ../sass/_review.scss */
+  .upper .kids-say,
+  .upper .can-learn {
+    float: left;
+    width: 50%;
+    margin-left: 50%;
+    margin-right: -100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* line 190, ../sass/_review.scss */
+  .lower {
+    display: none;
+  }
+}
+@media all and (min-width: 750px) {
+  /* line 202, ../sass/_review.scss */
+  #head {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 46, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+  #head:before, #head:after {
+    content: "";
+    display: table;
+  }
+  /* line 50, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+  #head:after {
+    clear: both;
+  }
+
+  /* line 207, ../sass/_review.scss */
+  #main {
+    float: left;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: -66.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* line 211, ../sass/_review.scss */
+  #sidebar {
+    clear: left;
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* line 216, ../sass/_review.scss */
+  #sidebar-lower {
+    clear: left;
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* line 221, ../sass/_review.scss */
+  #right-bottom {
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* line 225, ../sass/_review.scss */
+  #foot {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 46, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+  #foot:before, #foot:after {
+    content: "";
+    display: table;
+  }
+  /* line 50, ../../../lib/gems/1.9.1/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+  #foot:after {
+    clear: both;
+  }
+}
